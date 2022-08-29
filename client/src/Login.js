@@ -1,12 +1,17 @@
 import React from 'react'
+import './Login.css'
+import {loginUrl} from './spotify'
 
-import { Container } from 'react-bootstrap'
-
-const AUTH_URL = "https://accounts.spotify.com/authorize?client_id=bd70542e5ae94db0ac4364b20ab7f9a2&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state"
-export default function Login(){
-    return (
-    <Container> 
-        <a className= "btn btn-success btn-lg" href = {AUTH_URL}>Login With Spotify</a>
-    </Container>
-    )
+function Login() {
+  return (
+    <div className="login">
+        <img 
+          src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" 
+          alt=""
+        />
+        <a href={loginUrl}> LOGIN WITH SPOTIFY </a>
+    </div>
+  )
 }
+
+export default Login
